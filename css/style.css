@@ -15,8 +15,15 @@ h1{
 h2{
 	font-weight: bold;
 	text-align: center;
+	font-size: 1.2em;
+}
+
+h3{
+	font-weight: bold;
+	text-align: center;
 	text-decoration: underline;
 	line-height: 2.15;
+	font-size: 1.05em;
 }
 
 nav a{
@@ -74,23 +81,10 @@ main{
 	top: 0px;
   }
 
-.sports_photos, .portrait_photos{
+.portrait_photos, .sports_photos{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
   grid-row-gap: 12px;
-}
-
-.sports_photos{
-	grid-column: 1 / -1;
-	grid-row: 1 span 1;
-	padding: 5px;
-}
-
-.portrait_photos{
-	grid-column: 1 / -1;
-	grid-row: 3 span 1;
-	padding: 5px;
 }
 
 a:visited{color: black}
@@ -171,7 +165,7 @@ section{
 	
 	.portrait_photos, .sports_photos{
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
 		gap: 1em;
 	}
 
@@ -203,7 +197,5 @@ section{
 	.projects{
 		margin: 0 auto;
 	}
-
-
 
 }
