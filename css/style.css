@@ -84,7 +84,7 @@ main{
 .portrait_photos, .sports_photos{
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: 12px;
+  grid-gap: 12px;
 }
 
 a:visited{color: black}
@@ -149,6 +149,7 @@ section{
 	color: black;
 }
 
+/* TABLET */
 @media screen and (min-width: 700px){
 	/* ABOUT PAGE */
 	.ag_about main{
@@ -162,7 +163,6 @@ section{
 	}
 	
 	/* PHOTOGRAPHY PAGE */
-	
 	.portrait_photos, .sports_photos{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -172,6 +172,16 @@ section{
 	.portrait_photos img, .sports_photos img{
 		object-fit: cover;
 		height: 100%
+	}
+
+	.sports_photos img:first-child{
+		grid-column: 1 / -1;
+	}
+
+	.sports_photos img:nth-child(6){
+		grid-column: 2;
+		grid-row: 2;
+		border: 1px solid red;
 	}
 
 
@@ -206,5 +216,22 @@ section{
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-gap: 1em;
+	}
+
+/* PROJECTS */
+	.projects section{
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: 2em 1fr;
+	}
+
+	.projects p{
+		margin-top: 1em;
+	}
+
+	.projects section img{
+		grid-column: 1;
+		grid-row: 1 / span 2;
+		object-fit: cover;
 	}
 }
