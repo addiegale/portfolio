@@ -166,7 +166,7 @@ section{
 	.portrait_photos, .sports_photos{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 1em;
+		grid-gap: 1em;
 	}
 
 	.portrait_photos img, .sports_photos img{
@@ -198,4 +198,13 @@ section{
 		margin: 0 auto;
 	}
 
+}
+
+@media screen and (min-width: 850px){
+/* PHOTOGRAPHY */
+	.portrait_photos, .sports_photos{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 1em;
+	}
 }
