@@ -221,7 +221,7 @@ section{
 /* PROJECTS */
 	.projects section{
 		display: grid;
-		grid-template-columns: 1fr 2fr;
+		grid-template-columns: 1.5fr 1fr;
 		grid-template-rows: 2em 1fr;
 	}
 
