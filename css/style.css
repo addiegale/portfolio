@@ -6,7 +6,6 @@ body{
 .site_content{
 	padding: 1.5%;
 	margin: 3%;
-	background-color: white;
 }
 
 h1{
@@ -58,6 +57,35 @@ nav li [aria-current="page"]{
 		margin-bottom: 1.25em;
 	}
 }
+
+/* .form{
+	flex-wrap: wrap;
+	flex-basis: 100%;
+} */
+
+.portrait_img{
+	animation-name: slidein;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes slidein {
+	from {
+	  width: 20%;
+	  opacity: 0;
+	}
+	to {
+	  width: 50%;
+	  opacity: 1;
+	}
+  }
+
+@media all and (prefers-reduced-motion:reduce){
+	.portrait_img{
+		  transition: none;
+		  animation: none;
+	  }
+  }
 
 p, h1, h2 {
 	padding: 5px;
@@ -185,12 +213,14 @@ section{
 		height: 50%;
 		margin-left: 1em;
 	}
-	
+
+
 	/* PHOTOGRAPHY PAGE */
 	.portrait_photos, .sports_photos{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 1em;
+
 	}
 
 	.portrait_photos img, .sports_photos img{
@@ -200,12 +230,37 @@ section{
 
 	.sports_photos img:first-child{
 		grid-column: 1 / -1;
+		width: 100%;
+	}
+
+	.sports_photos img:nth-child(2){
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	.sports_photos img:nth-child(3){
+		grid-column: 3;
+		grid-row: 2;
+	}
+
+	.sports_photos img:nth-child(4){
+		grid-column: 2;
+		grid-row: 3;
+	}
+
+	.sports_photos img:nth-child(5){
+		grid-column: 3;
+		grid-row: 3;
 	}
 
 	.sports_photos img:nth-child(6){
 		grid-column: 2;
 		grid-row: 2;
-		border: 1px solid red;
+	}
+
+	.sports_photos img:nth-child(7){
+		grid-column: 1;
+		grid-row: 3;
 	}
 
 
@@ -218,6 +273,12 @@ section{
 
 	.hp img, .startup img{
 		width: 40%;
+	}
+
+	.hp, .startup, .sally, .salad, .photo, .clubs{
+		margin-left: 8%;
+		margin-right: 8%;
+		margin-bottom: 3%;
 	}
 
 	/* PROJECTS */
@@ -261,10 +322,3 @@ section{
 	}
 }
 
-/* 
-background-image: url("images/portrait.jpg");
-	height: 100%;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover; */
