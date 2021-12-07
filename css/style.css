@@ -1,8 +1,12 @@
 body{
 	font-family: 'Inter', 'Times New Roman';
-	padding: 1.5%;
-	margin: 5.75%;
 	font-size:125%;
+}
+
+.site_content{
+	padding: 1.5%;
+	margin: 3%;
+	background-color: white;
 }
 
 h1{
@@ -28,26 +32,30 @@ h3{
 
 nav a{
 	color: black;
+	text-decoration: none;
 }
 
-nav li{
+nav ul{
 	display: block;
 	padding: 5px;
+	font-size: .85em;
+	font-size: clamp(.75em,4vw,1.25em);
+	line-height: 1.5em;
 }
 
 nav li [aria-current="page"]{
-	color: rgb(255, 0, 221);
+	color: rgb(251, 0, 218);
 	font-weight: bold;
-	font-size: larger;
+	text-decoration: underline overline black;
 }
 
 @media screen and (min-width: 700px){
 	nav ul{
-		width: 42ch;
+		width: 50ch;
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
-		margin-bottom: 1.5em;
+		margin-bottom: 1.25em;
 	}
 }
 
@@ -105,8 +113,12 @@ main ul li{
 	font-weight: bold;
 }
 
-.hp img, .startup img, .sally img, .salad img{
+.hp img, .startup img, .sally img, .salad img, .professional img{
 	margin: auto;
+}
+
+.startup{
+	margin-bottom: 1.25em;
 }
 
 .photo img{
@@ -143,9 +155,10 @@ section{
 }
 
 .page_footer{
-	background-color: rgb(255, 145, 240);
+	background-color: rgb(255, 223, 251);
 	padding-top: 10px;
 	text-align:center;
+	margin: 0 auto;
 	color: black;
 }
 
@@ -157,6 +170,17 @@ section{
 	}
 
 	.ag_about main img{
+		width: 50%;
+		height: 50%;
+		margin-left: 1em;
+	}
+
+	/* PROFESSIONAL */
+	.internships main{
+		display: flex;
+	}
+
+	.internships main img{
 		width: 50%;
 		height: 50%;
 		margin-left: 1em;
@@ -210,6 +234,7 @@ section{
 
 }
 
+/* DESKTOP */
 @media screen and (min-width: 850px){
 /* PHOTOGRAPHY */
 	.portrait_photos, .sports_photos{
@@ -235,3 +260,11 @@ section{
 		object-fit: cover;
 	}
 }
+
+/* 
+background-image: url("images/portrait.jpg");
+	height: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; */
