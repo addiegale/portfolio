@@ -48,9 +48,9 @@ nav li [aria-current="page"]{
 	text-decoration: underline overline black;
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 725px){
 	nav ul{
-		width: 50ch;
+		width: 48ch;
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
@@ -58,11 +58,7 @@ nav li [aria-current="page"]{
 	}
 }
 
-/* .form{
-	flex-wrap: wrap;
-	flex-basis: 100%;
-} */
-
+/* ABOUT ME */
 .portrait_img{
 	animation-name: slidein;
     animation-duration: 5s;
@@ -131,29 +127,22 @@ main ul li{
 	padding: 5px;
 }
 
-.hp p, .startup p, .photo p, .sally p, .salad p{
-	font-style: italic;
-	text-align: center;
+/* CONTACT */
+.site_content label{
+	display: block;
 }
 
-.hp h3, .startup h3, .photo h3, .sally h3, .salad h3, .clubs p{
-	text-align: center;
-	font-weight: bold;
+.site_content input, .site_content textarea{
+	width: 100%;
 }
 
-.hp img, .startup img, .sally img, .salad img, .professional img{
-	margin: auto;
+.site_content button{
+	width: 5em;
+	background-color: rgb(255, 223, 251);
 }
 
-.startup{
-	margin-bottom: 1.25em;
-}
 
-.photo img{
-	margin: 0 auto;
-	padding: 12px;
-}
-
+/* PROJECTS */
 .projects{
 	line-height: 1.75;
 }
@@ -165,17 +154,13 @@ main ul li{
 .projects h2{
 	font-weight: bold;
 	text-decoration: underline;
-	line-height: 2;
+	line-height: 1.2;
+	margin-bottom: 7px;
 }
 
 .projects img{
 	padding: 6px;
 	margin: 0 auto;
-}
-
-.professional p{
-	line-height: 1.75;
-	padding: 5px;
 }
 
 section{
@@ -191,7 +176,7 @@ section{
 }
 
 /* TABLET */
-@media screen and (min-width: 700px){
+@media screen and (min-width: 725px){
 	/* ABOUT PAGE */
 	.ag_about main{
 		display: flex;
@@ -202,18 +187,6 @@ section{
 		height: 50%;
 		margin-left: 1em;
 	}
-
-	/* PROFESSIONAL */
-	.internships main{
-		display: flex;
-	}
-
-	.internships main img{
-		width: 50%;
-		height: 50%;
-		margin-left: 1em;
-	}
-
 
 	/* PHOTOGRAPHY PAGE */
 	.portrait_photos, .sports_photos{
@@ -231,54 +204,6 @@ section{
 	.sports_photos img:first-child{
 		grid-column: 1 / -1;
 		width: 100%;
-	}
-
-	.sports_photos img:nth-child(2){
-		grid-column: 1;
-		grid-row: 2;
-	}
-
-	.sports_photos img:nth-child(3){
-		grid-column: 3;
-		grid-row: 2;
-	}
-
-	.sports_photos img:nth-child(4){
-		grid-column: 2;
-		grid-row: 3;
-	}
-
-	.sports_photos img:nth-child(5){
-		grid-column: 3;
-		grid-row: 3;
-	}
-
-	.sports_photos img:nth-child(6){
-		grid-column: 2;
-		grid-row: 2;
-	}
-
-	.sports_photos img:nth-child(7){
-		grid-column: 1;
-		grid-row: 3;
-	}
-
-
-	/* RESUME PAGE */
-	.hp img, .startup img, .sally img, .salad img, .photo img{
-		display: block;
-		margin: 0 auto;
-		width: 50%;
-	}
-
-	.hp img, .startup img{
-		width: 40%;
-	}
-
-	.hp, .startup, .sally, .salad, .photo, .clubs{
-		margin-left: 8%;
-		margin-right: 8%;
-		margin-bottom: 3%;
 	}
 
 	/* PROJECTS */
@@ -320,5 +245,37 @@ section{
 		grid-row: 1 / span 2;
 		object-fit: cover;
 	}
+
+	.sports_photos img:nth-child(2){
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	.sports_photos img:nth-child(3){
+		grid-column: 3;
+		grid-row: 2;
+	}
+
+	.sports_photos img:nth-child(4){
+		grid-column: 2;
+		grid-row: 3;
+	}
+
+	.sports_photos img:nth-child(5){
+		grid-column: 3;
+		grid-row: 3;
+	}
+
+	.sports_photos img:nth-child(6){
+		grid-column: 2;
+		grid-row: 2;
+	}
+
+	.sports_photos img:nth-child(7){
+		grid-column: 1;
+		grid-row: 3;
+	}
+	
+
 }
 
