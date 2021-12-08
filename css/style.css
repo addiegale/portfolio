@@ -288,10 +288,9 @@ section{
 
 	/* https://www.w3schools.com/howto/howto_css_flip_card.asp */
 	.flip-card{
-		position: absolute;
 		background-color: transparent;
 		width: 25%;
-		height: 75%;
+		height: 100%;
 		perspective: 1000px;
 	}
 	  
