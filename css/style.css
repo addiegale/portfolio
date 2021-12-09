@@ -1,29 +1,29 @@
-body{
+body {
 	font-family: 'Inter', 'Times New Roman';
-	font-size:125%;
+	font-size: 125%;
 	background-color: white;
 }
 
-.site_content{
+.site_content {
 	padding: 1.5%;
 	margin: 3%;
 	background-color: white;
 }
 
-h1{
-	font-size: 1.75em; 
+h1 {
+	font-size: 1.75em;
 	font-weight: bold;
 	text-align: center;
 	line-height: 1.75;
 }
 
-h2{
+h2 {
 	font-weight: bold;
 	text-align: center;
 	font-size: 1.2em;
 }
 
-h3{
+h3 {
 	font-weight: bold;
 	text-align: center;
 	text-decoration: underline;
@@ -31,30 +31,30 @@ h3{
 	font-size: 1.05em;
 }
 
-nav{
+nav {
 	background-color: white;
 }
 
-nav a{
+nav a {
 	color: black;
 	text-decoration: none;
 }
 
-nav ul{
+nav ul {
 	display: block;
 	padding: 5px;
 	font-size: .85em;
-	font-size: clamp(.75em,4vw,1.25em);
+	font-size: clamp(.75em, 4vw, 1.25em);
 	line-height: 2em;
 }
 
-nav li [aria-current="page"]{
+nav li [aria-current="page"] {
 	color: rgb(251, 0, 218);
 	text-decoration: underline overline black;
 }
 
-@media screen and (min-width: 725px){
-	nav ul{
+@media screen and (min-width: 725px) {
+	nav ul {
 		width: 48ch;
 		display: flex;
 		justify-content: space-between;
@@ -64,46 +64,62 @@ nav li [aria-current="page"]{
 }
 
 /* ABOUT ME */
-.portrait_img{
+.portrait_img {
 	animation-name: rotate;
 	animation-duration: 5s;
 	animation-delay: 1s;
 	animation-timing-function: ease-out;
-    animation-iteration-count: 1;
+	animation-iteration-count: 1;
 }
 
 /* https://www.w3schools.com/cssref/tryit.asp?filename=trycss_anim_transform */
 @keyframes rotate {
-	50% {transform: rotate(180deg);
+	50% {
+		transform: rotate(180deg);
 	}
-  }
+}
 
-@media all and (prefers-reduced-motion:reduce){
-	.portrait_img{
-		  transition: none;
-		  animation: none;
-	  }
+@media all and (prefers-reduced-motion:reduce) {
+	.portrait_img {
+		transition: none;
+		animation: none;
+	}
 
-	.personal{
+	.personal {
 		background-attachment: scroll;
 	}
 
-  }
+	.flip-card,
+	.flip-card-inner,
+	.flip-card-front,
+	.flip-card-back {
+		transition: none;
+		animation: none;
+	}
 
-p, h1, h2 {
+	.flip-card:hover{
+		transition: none;
+		animation: none;
+	}
+
+}
+
+p,
+h1,
+h2 {
 	padding: 5px;
 	margin-bottom: 5px;
 }
 
-p{
+p {
 	line-height: 1.4;
 }
 
-main{
+main {
 	margin-bottom: 2vw;
 }
 
-.skip a{
+.skip a {
 	background: white;
 	left: 0;
 	padding: 6px;
@@ -112,145 +128,156 @@ main{
 	z-index: 1;
 	position: absolute;
 	top: -40px;
-  
-  }
-  
-.skip a:focus{
-	position: absolute;
-	top: 0px;
-  }
 
-.portrait_photos, .sports_photos{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 12px;
 }
 
-a:visited{color: black}
+.skip a:focus {
+	position: absolute;
+	top: 0px;
+}
 
-main ul li{
+.portrait_photos,
+.sports_photos {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 12px;
+}
+
+a:visited {
+	color: black
+}
+
+main ul li {
 	list-style-type: disc;
 	line-height: 1.25;
 	padding: 5px;
 }
 
 /* CONTACT */
-.site_content label{
+.site_content label {
 	display: block;
 }
 
-.site_content input, .site_content textarea{
+.site_content input,
+.site_content textarea {
 	width: 100%;
 }
 
-.site_content button{
+.site_content button {
 	width: 5em;
 	background-color: rgb(255, 223, 251);
 }
 
 /* PERSONAL */
-.personal{
-    height: 80vh;
-    background-color: white;
-    background-image: url("../images/michiganstadium.jpeg");
-    background-attachment: fixed;
-  	background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: fill;
+.personal {
+	height: 80vh;
+	background-color: white;
+	background-image: url("../images/michiganstadium.jpeg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	object-fit: fill;
 }
 
-.hover_text p{
+.hover_text p {
 	visibility: hidden;
 }
 
-.personal header, p, h2{
+.personal header,
+p,
+h2 {
 	background-color: white;
 }
 
 /* PROJECTS */
-.projects{
+.projects {
 	line-height: 1.75;
 }
 
-.projects h1{
+.projects h1 {
 	font-size: 1.25em;
 }
 
-.projects h2{
+.projects h2 {
 	font-weight: bold;
 	text-decoration: underline;
 	line-height: 1.2;
 	margin-bottom: 7px;
 }
 
-.projects img{
+.projects img {
 	padding: 6px;
 	margin: 0 auto;
 }
 
-section{
+section {
 	margin-bottom: 1em;
 }
 
-.page_footer{
+.page_footer {
 	background-color: rgb(255, 223, 251);
 	padding-top: 10px;
-	text-align:center;
+	text-align: center;
 	margin: 0 auto;
 	color: black;
 }
 
 /* TABLET */
-@media screen and (min-width: 735px){
+@media screen and (min-width: 735px) {
+
 	/* ABOUT PAGE */
-	.ag_about main{
+	.ag_about main {
 		display: flex;
 	}
 
-	.ag_about main img{
+	.ag_about main img {
 		width: 50%;
 		height: 50%;
 		margin-left: 1em;
 	}
 
 	/* PHOTOGRAPHY PAGE */
-	.portrait_photos, .sports_photos{
+	.portrait_photos,
+	.sports_photos {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 1em;
 
 	}
 
-	.portrait_photos img, .sports_photos img{
+	.portrait_photos img,
+	.sports_photos img {
 		object-fit: cover;
 		height: 100%
 	}
 
-	.sports_photos img:first-child{
+	.sports_photos img:first-child {
 		grid-column: 1 / -1;
 		width: 100%;
 	}
 
 	/* PROJECTS */
-	.projects img{
+	.projects img {
 		width: 50%;
 		display: block;
-  		margin-left: auto;
-  		margin-right: auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
-	.projects{
+	.projects {
 		margin: 0 auto;
 	}
 
 	/* PERSONAL */
-	
+
 }
 
 /* DESKTOP */
-@media screen and (min-width: 850px){
-/* PHOTOGRAPHY */
-	.portrait_photos, .sports_photos{
+@media screen and (min-width: 850px) {
+
+	/* PHOTOGRAPHY */
+	.portrait_photos,
+	.sports_photos {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-gap: 1em;
@@ -258,48 +285,48 @@ section{
 
 	/* PHOTOGRAPHY */
 
-	.sports_photos img:nth-child(2){
+	.sports_photos img:nth-child(2) {
 		grid-column: 1;
 		grid-row: 2;
 	}
 
-	.sports_photos img:nth-child(3){
+	.sports_photos img:nth-child(3) {
 		grid-column: 3;
 		grid-row: 2;
 	}
 
-	.sports_photos img:nth-child(4){
+	.sports_photos img:nth-child(4) {
 		grid-column: 2;
 		grid-row: 3;
 	}
 
-	.sports_photos img:nth-child(5){
+	.sports_photos img:nth-child(5) {
 		grid-column: 3;
 		grid-row: 3;
 	}
 
-	.sports_photos img:nth-child(6){
+	.sports_photos img:nth-child(6) {
 		grid-column: 2;
 		grid-row: 2;
 	}
 
-	.sports_photos img:nth-child(7){
+	.sports_photos img:nth-child(7) {
 		grid-column: 1;
 		grid-row: 3;
 	}
-	
+
 	/* PROJECTS */
-	.projects section{
+	.projects section {
 		display: grid;
 		grid-template-columns: 1.5fr 1fr;
 		grid-template-rows: 2em 1fr;
 	}
 
-	.projects p{
+	.projects p {
 		margin-top: 1em;
 	}
 
-	.projects section img{
+	.projects section img {
 		grid-column: 1;
 		grid-row: 1 / span 2;
 		object-fit: cover;
@@ -308,76 +335,79 @@ section{
 
 	/* PERSONAL */
 
-	.about_personal{
+	.about_personal {
 		padding: 3em;
 	}
-	.about_personal p{
-		visibility:visible;
+
+	.about_personal p {
+		visibility: visible;
 	}
 
-	.personal p, .personal h2{
+	.personal p,
+	.personal h2 {
 		background-color: rgb(255, 223, 251);
 		text-align: center;
 	}
+
 	/* https://www.w3schools.com/howto/howto_css_flip_card.asp */
-	.flip_container{
+	.flip_container {
 		display: flex;
-    	gap: 1em;
+		gap: 1em;
 	}
-	
+
 	.flip-card {
 		border: 5px solid white;
 		--card-width: calc(30 * 1vw);
 		--card-height: calc(var(--card-width) * 1.5);
-	  background-color: transparent;
-	  width: var(--card-width);
-	  height: var(--card-height);
-	  perspective: 1000px;
-	  flex-grow: 1;
+		background-color: transparent;
+		width: var(--card-width);
+		height: var(--card-height);
+		perspective: 1000px;
+		flex-grow: 1;
 	}
-	
+
 	.flip-card-inner {
-	  position: relative;
-	  width: 100%;
-	  height: 100%;
-	  text-align: center;
-	  transition: transform 0.6s;
-	  transform-style: preserve-3d;
-	  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		position: relative;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		transition: transform 0.6s;
+		transform-style: preserve-3d;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	}
-	
+
 	.flip-card:hover .flip-card-inner {
-	  transform: rotateY(180deg);
+		transform: rotateY(180deg);
 	}
-	
-	.flip-card-front, .flip-card-back {
-	  position: absolute;
-	  width: 100%;
-	  height: 100%;
-	  -webkit-backface-visibility: hidden;
-	  backface-visibility: hidden;
+
+	.flip-card-front,
+	.flip-card-back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
 	}
-	
+
 	.flip-card-front {
-	  background-color: #bbb;
-	  color: black;
+		background-color: #bbb;
+		color: black;
 	}
-	
-	.flip-card-front img{
-		width:100%;
+
+	.flip-card-front img {
+		width: 100%;
 		height: 100%;
 		object-fit: cover;
 	}
-	
+
 	.flip-card-back {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-	  background-color: rgb(255, 223, 251);
-	  color: black;
-	  transform: rotateY(180deg);
-	  border: 5px solid white;
+		background-color: rgb(255, 223, 251);
+		color: black;
+		transform: rotateY(180deg);
+		border: 5px solid white;
 	}
 
 }
-
