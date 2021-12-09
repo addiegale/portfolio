@@ -62,21 +62,16 @@ nav li [aria-current="page"]{
 
 /* ABOUT ME */
 .portrait_img{
-	animation-name: slidein;
+	animation-name: rotate;
 	animation-duration: 5s;
 	animation-delay: 1s;
 	animation-timing-function: ease-out;
     animation-iteration-count: 1;
 }
 
-@keyframes slidein {
-	from {
-	  width: 20%;
-	  opacity: 0;
-	}
-	to {
-	  width: 50%;
-	  opacity: 1;
+/* https://www.w3schools.com/cssref/tryit.asp?filename=trycss_anim_transform */
+@keyframes rotate {
+	50% {transform: rotate(180deg);
 	}
   }
 
@@ -282,8 +277,7 @@ section{
 	
 	/* PERSONAL */
 	.personal_content{
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		display: block;
 	}
 
 	/* https://www.w3schools.com/howto/howto_css_flip_card.asp */
