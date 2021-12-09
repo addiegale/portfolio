@@ -85,7 +85,7 @@ nav li [aria-current="page"] {
 		animation: none;
 	}
 
-	.personal {
+	.personal{
 		background-attachment: scroll;
 	}
 
@@ -95,6 +95,11 @@ nav li [aria-current="page"] {
 	.flip-card-back {
 		transition: none;
 		animation: none;
+	}
+
+	.flip-card-inner{
+		animation-iteration-count: 1 !important; 
+        transition-duration: 0.0001ms !important;
 	}
 
 	.flip-card:hover{
@@ -214,7 +219,7 @@ section {
 	margin-bottom: 1em;
 }
 
-.page_footer {
+.page_footer, .page_footer p{
 	background-color: rgb(255, 223, 251);
 	padding-top: 10px;
 	text-align: center;
@@ -223,7 +228,7 @@ section {
 }
 
 /* TABLET */
-@media screen and (min-width: 735px) {
+@media screen and (min-width: 750px) {
 
 	/* ABOUT PAGE */
 	.ag_about main {
@@ -273,7 +278,7 @@ section {
 }
 
 /* DESKTOP */
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 855px) {
 
 	/* PHOTOGRAPHY */
 	.portrait_photos,
