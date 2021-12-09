@@ -31,6 +31,10 @@ h3{
 	font-size: 1.05em;
 }
 
+nav{
+	background-color: white;
+}
+
 nav a{
 	color: black;
 	text-decoration: none;
@@ -46,7 +50,6 @@ nav ul{
 
 nav li [aria-current="page"]{
 	color: rgb(251, 0, 218);
-	font-weight: bold;
 	text-decoration: underline overline black;
 }
 
@@ -80,6 +83,11 @@ nav li [aria-current="page"]{
 		  transition: none;
 		  animation: none;
 	  }
+
+	.personal{
+		background-attachment: scroll;
+	}
+
   }
 
 p, h1, h2 {
@@ -140,6 +148,20 @@ main ul li{
 	background-color: rgb(255, 223, 251);
 }
 
+/* PERSONAL */
+.personal{
+    height: 80vh;
+    background-color: white;
+    background-image: url("../images/michiganstadium.jpeg");
+    background-attachment: fixed;
+  	background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: fill;
+}
+
+.personal header{
+	background-color: white;
+}
 
 /* PROJECTS */
 .projects{
